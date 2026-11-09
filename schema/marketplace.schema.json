@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/horae-dev/marketplace/main/schema/marketplace.schema.json",
+  "title": "Horae marketplace index",
+  "description": "marketplace.json: maps a plugin name to its git repository, its released versions (each pinned to a full commit SHA) and a tier. Mirrors PLAN.md section 4 and the lockfile contract of the core (schemas/lockfile/v1.json): same name, semver, https repo URL and commit patterns.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["plugins"],
+  "properties": {
+    "plugins": {
+      "description": "One entry per plugin name. Names must be unique (checked by the verify script, which JSON Schema cannot express for an array of objects).",
+      "type": "array",
+      "maxItems": 1024,
+      "items": { "$ref": "#/$defs/plugin" }
+    }
+  },
+  "$defs": {
+    "plugin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "repo", "versions", "tier"],
+      "properties": {
+        "name": {
+          "description": "The plugin name used in `horae plugin add <name>@<version>`.",
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "maxLength": 64
+        },
+        "repo": {
+          "description": "https git URL of the plugin repository (no port, user info, query or fragment; no `.` or `..` segment; not localhost).",
+          "type": "string",
+          "pattern": "^https://([a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\\.)*[a-z]([a-z0-9-]{0,61}[a-z0-9])?(/[A-Za-z0-9._-]+)+$",
+          "maxLength": 512,
+          "not": {
+            "anyOf": [
+              { "pattern": "/\\.\\.?(/|$)" },
+              { "pattern": "^https://([^/]*\\.)?localhost/" }
+            ]
+          }
+        },
+        "versions": {
+          "description": "Released versions: semver -> the full 40-hex commit SHA the tag `v<version>` points to. Nothing resolves a tag at install time; the SHA is the pin.",
+          "type": "object",
+          "minProperties": 1,
+          "maxProperties": 512,
+          "additionalProperties": false,
+          "patternProperties": {
+            "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(-[0-9A-Za-z-]+(\\.[0-9A-Za-z-]+)*)?(\\+[0-9A-Za-z-]+(\\.[0-9A-Za-z-]+)*)?$": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            }
+          }
+        },
+        "tier": {
+          "description": "`first-party`: maintained in the horae-dev organization. `community`: anyone else.",
+          "enum": ["first-party", "community"]
+        }
+      }
+    }
+  }
+}
