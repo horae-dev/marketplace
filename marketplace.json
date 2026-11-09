@@ -28,7 +28,8 @@
       "name": "ntfy",
       "repo": "https://github.com/horae-dev/plugin-ntfy",
       "versions": {
-        "0.3.0": "e5b9cf8d74600e5489f8c42a72155e61aa456040"
+        "0.3.0": "e5b9cf8d74600e5489f8c42a72155e61aa456040",
+        "0.3.1": "e7e841d43e4e2179e1e67ce1357ee942edc006a8"
       },
       "tier": "first-party"
     },
