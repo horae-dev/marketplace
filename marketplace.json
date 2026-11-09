@@ -27,6 +27,14 @@
       "tier": "first-party"
     },
     {
+      "name": "imap",
+      "repo": "https://github.com/horae-dev/plugin-imap",
+      "versions": {
+        "0.1.0": "5d0642d3ee79cb8c4e8e0f1cfc1096598bedeeed"
+      },
+      "tier": "first-party"
+    },
+    {
       "name": "livesync",
       "repo": "https://github.com/horae-dev/plugin-livesync",
       "versions": {
