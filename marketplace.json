@@ -1,3 +1,44 @@
 {
-  "plugins": []
+  "plugins": [
+    {
+      "name": "calendar",
+      "repo": "https://github.com/horae-dev/plugin-calendar",
+      "versions": {
+        "0.1.0": "2b1bbe92d81f4720422d32f13b7fe6d812d353f8"
+      },
+      "tier": "first-party"
+    },
+    {
+      "name": "github",
+      "repo": "https://github.com/horae-dev/plugin-github",
+      "versions": {
+        "0.2.0": "c3d065f4fd79109099428e4b1f3b8d2c66918cb0"
+      },
+      "tier": "first-party"
+    },
+    {
+      "name": "livesync",
+      "repo": "https://github.com/horae-dev/plugin-livesync",
+      "versions": {
+        "0.1.0": "17f0fb7f09bf1c157b2bed8fb2a3d70137ad1946"
+      },
+      "tier": "first-party"
+    },
+    {
+      "name": "ntfy",
+      "repo": "https://github.com/horae-dev/plugin-ntfy",
+      "versions": {
+        "0.3.0": "e5b9cf8d74600e5489f8c42a72155e61aa456040"
+      },
+      "tier": "first-party"
+    },
+    {
+      "name": "obsidian",
+      "repo": "https://github.com/horae-dev/plugin-obsidian",
+      "versions": {
+        "0.1.0": "c313447a1a5c38f5c49e5bd8c2f9532af65b1762"
+      },
+      "tier": "first-party"
+    }
+  ]
 }

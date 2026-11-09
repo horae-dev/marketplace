@@ -79,13 +79,14 @@ def _git(cwd: Path, *args: str, allow: str = "never") -> str:
 
 
 def clone_https(url: str, dest: Path) -> None:
-    """Clone `url` into `dest` over https only: all branches and tags, without file contents."""
+    """Clone `url` into `dest` over https only: all branches and tags. A full clone (no
+    partial `--filter`), so later reads like `git show` never fetch lazily over a protocol
+    the other git calls block."""
     _git(
         dest.parent,
         "clone",
         "--quiet",
         "--no-checkout",
-        "--filter=blob:none",
         "--",
         url,
         str(dest),
