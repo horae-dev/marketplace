@@ -26,6 +26,14 @@
       "tier": "first-party"
     },
     {
+      "name": "mcp-brief",
+      "repo": "https://github.com/horae-dev/plugin-mcp-brief",
+      "versions": {
+        "0.1.1": "13da61338482955c5417a3e6e0146f1ae0d9ff19"
+      },
+      "tier": "first-party"
+    },
+    {
       "name": "ntfy",
       "repo": "https://github.com/horae-dev/plugin-ntfy",
       "versions": {
