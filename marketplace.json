@@ -41,7 +41,8 @@
       "repo": "https://github.com/horae-dev/plugin-imap",
       "versions": {
         "0.1.0": "5d0642d3ee79cb8c4e8e0f1cfc1096598bedeeed",
-        "0.1.1": "ecb7ffae5940848dbeba3f06337143d470dd21ca"
+        "0.1.1": "ecb7ffae5940848dbeba3f06337143d470dd21ca",
+        "0.1.2": "8132947fc5cd565fa9fefa9738ad910a68bcdaa6"
       },
       "tier": "first-party"
     },
