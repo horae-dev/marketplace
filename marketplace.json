@@ -81,6 +81,14 @@
         "0.1.1": "1c613ea8a0604a28b78d7071f3a7d25fd2b7c988"
       },
       "tier": "first-party"
+    },
+    {
+      "name": "school-fr",
+      "repo": "https://github.com/horae-dev/plugin-school-fr",
+      "versions": {
+        "0.4.1": "61a93a09d8ccf931990a052780acbcdfe2019e29"
+      },
+      "tier": "first-party"
     }
   ]
 }
