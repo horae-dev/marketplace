@@ -4,7 +4,8 @@
       "name": "calendar",
       "repo": "https://github.com/horae-dev/plugin-calendar",
       "versions": {
-        "0.1.0": "2b1bbe92d81f4720422d32f13b7fe6d812d353f8"
+        "0.1.0": "2b1bbe92d81f4720422d32f13b7fe6d812d353f8",
+        "0.1.1": "a5a32b34f62fae5291245567d2e794562b35875b"
       },
       "tier": "first-party"
     },
@@ -29,7 +30,8 @@
       "repo": "https://github.com/horae-dev/plugin-ntfy",
       "versions": {
         "0.3.0": "e5b9cf8d74600e5489f8c42a72155e61aa456040",
-        "0.3.1": "e7e841d43e4e2179e1e67ce1357ee942edc006a8"
+        "0.3.1": "e7e841d43e4e2179e1e67ce1357ee942edc006a8",
+        "0.3.2": "99d1733f0a810d072a8093ac7f84ca2a1b31a59b"
       },
       "tier": "first-party"
     },
