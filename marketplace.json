@@ -18,6 +18,14 @@
       "tier": "first-party"
     },
     {
+      "name": "gmail",
+      "repo": "https://github.com/horae-dev/plugin-gmail",
+      "versions": {
+        "0.2.0": "22adb0fb16b6f04f0a001527205aee79e158dbbc"
+      },
+      "tier": "first-party"
+    },
+    {
       "name": "homeassistant",
       "repo": "https://github.com/horae-dev/plugin-homeassistant",
       "versions": {
