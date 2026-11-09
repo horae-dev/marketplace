@@ -30,7 +30,8 @@
       "repo": "https://github.com/horae-dev/plugin-homeassistant",
       "versions": {
         "0.1.0": "5ff782b98121c7318ad25f08c7e0e95ff6144d89",
-        "0.2.0": "39b3a0ddee9d460bfbd8bd8da8d89b8575e81bd4"
+        "0.2.0": "39b3a0ddee9d460bfbd8bd8da8d89b8575e81bd4",
+        "0.2.1": "e054f53f63575958e40dd6dd8a8fb48f6c936e65"
       },
       "tier": "first-party"
     },
@@ -38,7 +39,8 @@
       "name": "imap",
       "repo": "https://github.com/horae-dev/plugin-imap",
       "versions": {
-        "0.1.0": "5d0642d3ee79cb8c4e8e0f1cfc1096598bedeeed"
+        "0.1.0": "5d0642d3ee79cb8c4e8e0f1cfc1096598bedeeed",
+        "0.1.1": "ecb7ffae5940848dbeba3f06337143d470dd21ca"
       },
       "tier": "first-party"
     },
@@ -64,7 +66,8 @@
       "versions": {
         "0.3.0": "e5b9cf8d74600e5489f8c42a72155e61aa456040",
         "0.3.1": "e7e841d43e4e2179e1e67ce1357ee942edc006a8",
-        "0.3.2": "99d1733f0a810d072a8093ac7f84ca2a1b31a59b"
+        "0.3.2": "99d1733f0a810d072a8093ac7f84ca2a1b31a59b",
+        "0.3.3": "7a9fd4cc030758fb67d26459470d6c98ee920fa1"
       },
       "tier": "first-party"
     },
