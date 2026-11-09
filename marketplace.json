@@ -18,6 +18,15 @@
       "tier": "first-party"
     },
     {
+      "name": "homeassistant",
+      "repo": "https://github.com/horae-dev/plugin-homeassistant",
+      "versions": {
+        "0.1.0": "5ff782b98121c7318ad25f08c7e0e95ff6144d89",
+        "0.2.0": "39b3a0ddee9d460bfbd8bd8da8d89b8575e81bd4"
+      },
+      "tier": "first-party"
+    },
+    {
       "name": "livesync",
       "repo": "https://github.com/horae-dev/plugin-livesync",
       "versions": {
