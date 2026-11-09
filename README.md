@@ -28,6 +28,8 @@ Git-based plugin index for Horae (marketplace.json) with CI that verifies every 
 
 ## Contributing
 
+To list a plugin, follow the [contribution guide](CONTRIBUTING.md): how to submit, what CI and reviewers check, tiers, updates, removal, and running your own index. The pull request template is a checklist of the same checks.
+
 This project is developed mostly by AI coding agents supervised by a human maintainer. Read [AGENTS.md](AGENTS.md) for the workflow (it applies to humans too), and the organization's [contributing guide](https://github.com/horae-dev/.github/blob/main/CONTRIBUTING.md) and [security policy](https://github.com/horae-dev/.github/blob/main/SECURITY.md).
 
 ## License
