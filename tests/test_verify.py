@@ -106,3 +106,11 @@ def test_matrix_output(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> No
     assert out == {
         "include": [{"name": "demo", "repo": REPO_URL, "version": "0.1.0", "sha": "c" * 40}]
     }
+
+
+def test_semver_key_orders_releases_after_prereleases() -> None:
+    from horae_marketplace.verify import semver_key
+
+    versions = ["0.10.0", "0.3.1", "1.0.0-rc.1", "1.0.0", "0.3.0"]
+    assert max(versions, key=semver_key) == "1.0.0"
+    assert sorted(versions, key=semver_key)[:3] == ["0.3.0", "0.3.1", "0.10.0"]

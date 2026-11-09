@@ -113,6 +113,13 @@ def horae_manifest_checker(manifest_text: Path) -> Manifest:
     return Manifest(name=str(manifest.name), version=str(manifest.version))
 
 
+def semver_key(version: str) -> tuple[int, int, int, int, str]:
+    """Sort key for a semver string: a release sorts after its pre-releases."""
+    core, _, pre = version.partition("+")[0].partition("-")
+    major, minor, patch = (int(part) for part in core.split("."))
+    return (major, minor, patch, 0 if pre else 1, pre)
+
+
 def load_json(path: Path) -> Any:
     try:
         return json.loads(path.read_text(encoding="utf-8"))
@@ -232,11 +239,18 @@ def main(
             print(f"error: {args.index}: {message}", file=sys.stderr)
         return 1
     if args.matrix:
-        include = [
-            {"name": e["name"], "repo": e["repo"], "version": v, "sha": sha}
-            for e in index["plugins"]
-            for v, sha in e["versions"].items()
-        ]
+        # Only each plugin's latest version: older pins are expected to drift from core main.
+        include = []
+        for e in index["plugins"]:
+            version = max(e["versions"], key=semver_key)
+            include.append(
+                {
+                    "name": e["name"],
+                    "repo": e["repo"],
+                    "version": version,
+                    "sha": e["versions"][version],
+                }
+            )
         print(json.dumps({"include": include}))
         return 0
     print(f"schema ok: {len(index['plugins'])} plugin(s)")
