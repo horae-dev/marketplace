@@ -58,7 +58,8 @@ jobs:
       - name: Verify every entry
         env:
           UV_LOCKED: "0"
-        run: uv run --with "git+https://github.com/horae-dev/horae@main" marketplace-verify
+        # `python -m`, not the console script: the script pins the project venv and ignores --with.
+        run: uv run --with "git+https://github.com/horae-dev/horae@main" python -m horae_marketplace.verify
 
   ci-ok:
     name: CI OK

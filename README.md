@@ -21,7 +21,7 @@ Git-based plugin index for Horae (marketplace.json) with CI that verifies every 
 
 ## Verification
 
-`uv run marketplace-verify` checks the schema and unique names, then, for every entry and version, clones the repo (https only), checks that the pinned commit exists, that tag `v<version>` points to the same commit, and that `plugin.yaml` at that commit passes the core's validator and declares the same name and version. It needs `horae` installed (CI uses git main): `uv run --with "git+https://github.com/horae-dev/horae@main" marketplace-verify`. Use `--schema-only` to skip git.
+`uv run --with "git+https://github.com/horae-dev/horae@main" python -m horae_marketplace.verify` checks the schema and unique names, then, for every entry and version, clones the repo (https only), checks that the pinned commit exists, that tag `v<version>` points to the same commit, and that `plugin.yaml` at that commit passes the core's validator and declares the same name and version. It needs `horae` installed (CI uses git main): `uv run --with "git+https://github.com/horae-dev/horae@main" marketplace-verify`. Use `--schema-only` to skip git.
 
 - CI (`ci.yml`) runs lint, types, tests (including a tampered-SHA fixture) and the verification on every PR and push to main.
 - The nightly workflow (`nightly.yml`) runs each plugin's tests at its pinned SHA against core main and opens or updates an issue when one fails.
