@@ -37,7 +37,8 @@
       "name": "obsidian",
       "repo": "https://github.com/horae-dev/plugin-obsidian",
       "versions": {
-        "0.1.0": "c313447a1a5c38f5c49e5bd8c2f9532af65b1762"
+        "0.1.0": "c313447a1a5c38f5c49e5bd8c2f9532af65b1762",
+        "0.1.1": "1c613ea8a0604a28b78d7071f3a7d25fd2b7c988"
       },
       "tier": "first-party"
     }
