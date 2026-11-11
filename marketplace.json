@@ -22,7 +22,8 @@
       "repo": "https://github.com/horae-dev/plugin-gmail",
       "versions": {
         "0.2.0": "22adb0fb16b6f04f0a001527205aee79e158dbbc",
-        "0.2.1": "f86460eafb64b04b036b9dfe3d9edf29ef5ccb54"
+        "0.2.1": "f86460eafb64b04b036b9dfe3d9edf29ef5ccb54",
+        "0.3.0": "d47618c16f1d906095de421282a01376278fa360"
       },
       "tier": "first-party"
     },
