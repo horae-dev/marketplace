@@ -52,7 +52,8 @@
       "repo": "https://github.com/horae-dev/plugin-livesync",
       "versions": {
         "0.1.0": "17f0fb7f09bf1c157b2bed8fb2a3d70137ad1946",
-        "0.1.1": "5064192160448d1715e9db919569e3d2516a5cc6"
+        "0.1.1": "5064192160448d1715e9db919569e3d2516a5cc6",
+        "0.1.2": "463eff1aee0140474698954fc35bc830b15125e3"
       },
       "tier": "first-party"
     },
@@ -81,7 +82,8 @@
       "versions": {
         "0.1.0": "c313447a1a5c38f5c49e5bd8c2f9532af65b1762",
         "0.1.1": "1c613ea8a0604a28b78d7071f3a7d25fd2b7c988",
-        "0.1.2": "ac92b4c990723ff09f92885f9387a7812024745f"
+        "0.1.2": "ac92b4c990723ff09f92885f9387a7812024745f",
+        "0.1.3": "357ed6e59cc0e8154009546beaa25277bdd85492"
       },
       "tier": "first-party"
     },
