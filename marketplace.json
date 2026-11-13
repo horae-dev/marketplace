@@ -90,6 +90,14 @@
       "tier": "first-party"
     },
     {
+      "name": "pack-daily-brief",
+      "repo": "https://github.com/horae-dev/pack-daily-brief",
+      "versions": {
+        "0.1.0": "89fa9cea1bf6cd095a80777af73de0115574a163"
+      },
+      "tier": "first-party"
+    },
+    {
       "name": "school-fr",
       "repo": "https://github.com/horae-dev/plugin-school-fr",
       "versions": {
