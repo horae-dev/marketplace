@@ -5,7 +5,8 @@
       "repo": "https://github.com/horae-dev/plugin-calendar",
       "versions": {
         "0.1.0": "2b1bbe92d81f4720422d32f13b7fe6d812d353f8",
-        "0.1.1": "a5a32b34f62fae5291245567d2e794562b35875b"
+        "0.1.1": "a5a32b34f62fae5291245567d2e794562b35875b",
+        "0.1.2": "cc22014a1bf892cf081c4bfe3466379109671cea"
       },
       "tier": "first-party"
     },
