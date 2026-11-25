@@ -16,7 +16,8 @@
       "versions": {
         "0.2.0": "c3d065f4fd79109099428e4b1f3b8d2c66918cb0",
         "0.3.0": "54873ee95ef1ee39d92bde4a02d93f1eca090797",
-        "0.4.0": "186e45a45817a860f88ebaea506acff9c78e3194"
+        "0.4.0": "186e45a45817a860f88ebaea506acff9c78e3194",
+        "0.5.0": "ea956a8e8158fddb59d3f39a1ac982b29d5798a5"
       },
       "tier": "first-party"
     },
