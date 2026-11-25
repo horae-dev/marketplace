@@ -56,6 +56,20 @@ jobs:
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    # Plugins whose CI runs a test server get the same one here, or their integration tests
+    # (which refuse to skip when CI is set) fail. An empty image skips the service.
+    services:
+      greenmail:
+        # The imap plugin's test IMAP server (GreenMail 2.1.15), the digest its own CI pins.
+        image: ${{ matrix.name == 'imap' && 'greenmail/standalone@sha256:309ba544ea482e5d4265d09921cdab07c8dad2cc4481d715c9b8ff5d3f0a149f' || '' }}
+        ports:
+          - 3143:3143
+          - 3993:3993
+        env:
+          GREENMAIL_OPTS: >-
+            -Dgreenmail.setup.test.imap -Dgreenmail.setup.test.imaps
+            -Dgreenmail.hostname=0.0.0.0
+            -Dgreenmail.users=tester:test-password@example.org
     env:
       PLUGIN_NAME: ${{ matrix.name }}
       PLUGIN_VERSION: ${{ matrix.version }}
@@ -81,6 +95,12 @@ jobs:
           set -o pipefail
           # Move the core dependency (horae-sdk) to the latest main instead of the plugin's lock.
           uv sync --upgrade-package horae-sdk
+          if [ "${PLUGIN_NAME}" = imap ]; then
+            # Synthetic GreenMail account, the same values as the plugin's own CI.
+            export HORAE_IMAP_TEST_HOST=127.0.0.1 HORAE_IMAP_TEST_PORT=3143 \
+              HORAE_IMAP_TEST_IMAPS_PORT=3993 HORAE_IMAP_TEST_USER=tester \
+              HORAE_IMAP_TEST_PASSWORD=test-password
+          fi
           uv run pytest -q 2>&1 | tee ../pytest.log
       - name: Record the result
         if: ${{ always() }}
