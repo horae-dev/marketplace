@@ -15,7 +15,8 @@
       "repo": "https://github.com/horae-dev/plugin-github",
       "versions": {
         "0.2.0": "c3d065f4fd79109099428e4b1f3b8d2c66918cb0",
-        "0.3.0": "54873ee95ef1ee39d92bde4a02d93f1eca090797"
+        "0.3.0": "54873ee95ef1ee39d92bde4a02d93f1eca090797",
+        "0.4.0": "186e45a45817a860f88ebaea506acff9c78e3194"
       },
       "tier": "first-party"
     },
