@@ -16,7 +16,7 @@ Git-based plugin index for Horae (marketplace.json) with CI that verifies every 
 - Schema: [`schema/marketplace.schema.json`](schema/marketplace.schema.json) (strict; the name, semver, https repo URL and commit patterns match the core's `horae.lock` contract).
 - `versions` maps a semver to the full commit SHA that the tag `v<version>` points to. The SHA is the pin.
 - `tier` is `first-party` (horae-dev) or `community`.
-- Only plugins (repos with a `plugin.yaml`) are listed. Pipeline packs (`pack-*`) are not part of this index yet.
+- Every entry is a repo with a `plugin.yaml`: a plugin, or a pipeline pack (`pack-*`, a `plugin.yaml` that lists `provides.pipelines` and has no runtime). `horae plugin add` installs a pack's pipelines with it.
 - An entry is added only for a released (tagged) version. Nothing is listed until its repo has a `v<version>` tag.
 
 ## Verification
